@@ -51,17 +51,35 @@
     <Compile Include="BL\table_view.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="database.cs" />
-    <Compile Include="PL\Form1.cs">
+    <Compile Include="PL\Update_user_pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Update_user_pass.Designer.cs">
+      <DependentUpon>Update_user_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Update_user_infos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>Update_user_infos.cs</DependentUpon>
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_create.Designer.cs">
+      <DependentUpon>User_create.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PL\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PL\Update_user_infos.resx">
+      <DependentUpon>Update_user_infos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Update_user_pass.resx">
+      <DependentUpon>Update_user_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_create.resx">
+      <DependentUpon>User_create.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

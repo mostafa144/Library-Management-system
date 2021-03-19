@@ -21,5 +21,20 @@ namespace Library_Mangement_system
         {
 
         }
+
+        private void btnUpdateInformation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateInformation_MouseHover(object sender, EventArgs e)
+        {
+            btnUpdateInformation.BackColor = Color.Cyan;
+        }
+
+        private void btnUpdateInformation_MouseLeave(object sender, EventArgs e)
+        {
+            btnUpdateInformation.BackColor = Color.White;
+        }
     }
 }
