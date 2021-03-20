@@ -8,3 +8,15 @@ C:\Users\Dell\DesktopProject\Library-Management-system\Library-Mangement-system\
 C:\Users\Dell\DesktopProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.csproj.CoreCompileInputs.cache
 C:\Users\Dell\DesktopProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.exe
 C:\Users\Dell\DesktopProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.pdb
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\bin\Debug\Library-Mangement-system.exe.config
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\bin\Debug\Library-Mangement-system.exe
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\bin\Debug\Library-Mangement-system.pdb
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.csprojAssemblyReference.cache
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.Form1.resources
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Update_user_pass.resources
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.User_create.resources
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.Properties.Resources.resources
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.csproj.GenerateResource.cache
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.csproj.CoreCompileInputs.cache
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.exe
+C:\Users\Darsh\Downloads\MyProject\Library-Mangement-system\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.pdb

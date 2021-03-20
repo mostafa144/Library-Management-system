@@ -11,7 +11,7 @@ namespace Library_Mangement_system
     {
         public static SqlConnection db()
         {
-            SqlConnection con = new SqlConnection(@"Server=DESKTOP-GM27C9I; database=Library; integrated security=SSPI");
+            SqlConnection con = new SqlConnection(@"Server=.; database=Library; integrated security=SSPI");
             return con;
         }
 
