@@ -8,33 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Library_Mangement_system
+namespace Library_Mangement_system.PL
 {
-    public partial class Form1 : Form
+    public partial class Update_user_infos : Form
     {
-        public Form1()
+        public Update_user_infos()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button1_MouseHover(object sender, EventArgs e)
         {
-
+            btnUpdateInfo.BackColor = Color.Cyan;
         }
 
-        private void btnUpdateInformation_Click(object sender, EventArgs e)
+        private void btnUpdateInfo_MouseLeave(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnUpdateInformation_MouseHover(object sender, EventArgs e)
-        {
-            btnUpdateInformation.BackColor = Color.Cyan;
-        }
-
-        private void btnUpdateInformation_MouseLeave(object sender, EventArgs e)
-        {
-            btnUpdateInformation.BackColor = Color.White;
+            btnUpdateInfo.BackColor = Color.White;
         }
     }
 }
