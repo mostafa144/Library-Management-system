@@ -30,6 +30,7 @@ namespace Library_Mangement_system.PL
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,19 +127,19 @@ namespace Library_Mangement_system.PL
             // nextPageToolStripMenuItem
             // 
             this.nextPageToolStripMenuItem.Name = "nextPageToolStripMenuItem";
-            this.nextPageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nextPageToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.nextPageToolStripMenuItem.Text = "Next Page";
             // 
             // employeeWindowToolStripMenuItem
             // 
             this.employeeWindowToolStripMenuItem.Name = "employeeWindowToolStripMenuItem";
-            this.employeeWindowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.employeeWindowToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.employeeWindowToolStripMenuItem.Text = "Employee Window";
             // 
             // searchWindowToolStripMenuItem
             // 
             this.searchWindowToolStripMenuItem.Name = "searchWindowToolStripMenuItem";
-            this.searchWindowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchWindowToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.searchWindowToolStripMenuItem.Text = "Search Window";
             // 
             // openToolStripMenuItem
@@ -155,18 +156,18 @@ namespace Library_Mangement_system.PL
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(104, 6);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // fileToolStripMenuItem
@@ -184,7 +185,7 @@ namespace Library_Mangement_system.PL
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // menuStrip1
@@ -195,11 +196,12 @@ namespace Library_Mangement_system.PL
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1354, 24);
-            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // lbl1
             // 
+            this.lbl1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(118, 17);
             this.lbl1.Text = "toolStripStatusLabel1";
@@ -235,7 +237,7 @@ namespace Library_Mangement_system.PL
             this.button1.Location = new System.Drawing.Point(460, 305);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(230, 52);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -248,7 +250,7 @@ namespace Library_Mangement_system.PL
             this.label2.Location = new System.Drawing.Point(450, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 57);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Welcome To";
             // 
             // label1
@@ -259,7 +261,7 @@ namespace Library_Mangement_system.PL
             this.label1.Location = new System.Drawing.Point(214, 144);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(710, 79);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Library Management System";
             // 
             // button3
@@ -270,7 +272,7 @@ namespace Library_Mangement_system.PL
             this.button3.Location = new System.Drawing.Point(1213, 558);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 52);
-            this.button3.TabIndex = 12;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -287,6 +289,7 @@ namespace Library_Mangement_system.PL
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Welcome";
             this.Text = "Welcome";
             this.contextMenuStrip1.ResumeLayout(false);

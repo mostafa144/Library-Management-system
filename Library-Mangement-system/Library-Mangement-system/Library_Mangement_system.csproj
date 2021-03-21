@@ -132,6 +132,12 @@
     <Compile Include="PL\User_create.Designer.cs">
       <DependentUpon>User_create.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_Employee.Designer.cs">
+      <DependentUpon>User_Employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <EmbeddedResource Include="PL\User_create.resx">
       <DependentUpon>User_create.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_Employee.resx">
+      <DependentUpon>User_Employee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="DATA_AL\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -185,9 +195,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DATA_AL\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -199,6 +207,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi1.png" />
+    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
