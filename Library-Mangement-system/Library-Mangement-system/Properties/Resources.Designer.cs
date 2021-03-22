@@ -73,6 +73,16 @@ namespace Library_Mangement_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gdgdfv {
+            get {
+                object obj = ResourceManager.GetObject("gdgdfv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maxi1 {
             get {
                 object obj = ResourceManager.GetObject("maxi1", resourceCulture);
