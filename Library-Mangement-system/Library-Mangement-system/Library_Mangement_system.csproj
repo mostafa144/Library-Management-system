@@ -162,6 +162,12 @@
     <Compile Include="PL\User_Employee.Designer.cs">
       <DependentUpon>User_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_info_controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_info_controller.Designer.cs">
+      <DependentUpon>User_info_controller.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\User_Employee.resx">
       <DependentUpon>User_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_info_controller.resx">
+      <DependentUpon>User_info_controller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
