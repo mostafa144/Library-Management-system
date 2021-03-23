@@ -99,5 +99,15 @@ namespace Library_Mangement_system.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap تنزيل {
+            get {
+                object obj = ResourceManager.GetObject("تنزيل", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
