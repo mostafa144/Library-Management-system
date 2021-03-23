@@ -72,6 +72,18 @@ namespace Library_Mangement_system.PL
                 textBox1.ForeColor = Color.Gray;
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            User_search f3 = new User_search();
+            f3.Show();
+            this.Hide();
+        }
+
+        private void search_online_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
   }

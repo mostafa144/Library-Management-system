@@ -34,7 +34,7 @@ namespace Library_Mangement_system.DATA_AL
         public virtual DbSet<categorie> categorie { get; set; }
         public virtual DbSet<log> log { get; set; }
         public virtual DbSet<publisher> publisher { get; set; }
-        public virtual DbSet<staff> staff { get; set; }
+        public virtual DbSet<staff> staffs { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     
         public virtual int delete_author(Nullable<int> id)
