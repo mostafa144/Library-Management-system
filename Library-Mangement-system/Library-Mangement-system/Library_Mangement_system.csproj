@@ -108,6 +108,30 @@
     <Compile Include="DATA_AL\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="PL\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Menu_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Menu_control.Designer.cs">
+      <DependentUpon>Menu_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\return_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\return_book.Designer.cs">
+      <DependentUpon>return_book.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\search_online.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +162,12 @@
     <Compile Include="PL\User_Employee.Designer.cs">
       <DependentUpon>User_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\User_info_controller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\User_info_controller.Designer.cs">
+      <DependentUpon>User_info_controller.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +176,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Menu_control.resx">
+      <DependentUpon>Menu_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\return_book.resx">
+      <DependentUpon>return_book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\search_online.resx">
       <DependentUpon>search_online.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\User_Employee.resx">
       <DependentUpon>User_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\User_info_controller.resx">
+      <DependentUpon>User_info_controller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -207,6 +252,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\gdgdfv.jpg" />
     <None Include="Resources\minimazar.png" />
     <None Include="Resources\maxi1.png" />
     <None Include="Resources\cerrar.png" />
