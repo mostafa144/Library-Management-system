@@ -499,7 +499,7 @@
           <EntitySet Name="categorie" EntityType="Self.categorie" />
           <EntitySet Name="log" EntityType="Self.log" />
           <EntitySet Name="publisher" EntityType="Self.publisher" />
-          <EntitySet Name="staff" EntityType="Self.staff" />
+          <EntitySet Name="staffs" EntityType="Self.staff" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_book_author" Association="Self.FK_book_author">
             <End Role="author" EntitySet="author" />
@@ -514,7 +514,7 @@
             <End Role="borrow" EntitySet="borrow" />
           </AssociationSet>
           <AssociationSet Name="FK_log_staff" Association="Self.FK_log_staff">
-            <End Role="staff" EntitySet="staff" />
+            <End Role="staff" EntitySet="staffs" />
             <End Role="log" EntitySet="log" />
           </AssociationSet>
           <AssociationSet Name="MM_borrow" Association="Self.MM_borrow">
@@ -687,7 +687,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="staff">
+          <EntitySetMapping Name="staffs">
             <EntityTypeMapping TypeName="LibraryModel.staff">
               <MappingFragment StoreEntitySet="staff">
                 <ScalarProperty Name="sf_id" ColumnName="sf_id" />

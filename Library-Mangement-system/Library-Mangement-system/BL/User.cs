@@ -8,5 +8,7 @@ namespace Library_Mangement_system.BL
 {
     class User
     {
+        public static DATA_AL.staff user = new DATA_AL.staff();
+
     }
 }

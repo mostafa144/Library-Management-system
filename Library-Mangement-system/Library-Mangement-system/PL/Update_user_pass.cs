@@ -19,12 +19,30 @@ namespace Library_Mangement_system.PL
 
         private void btnChange_MouseHover(object sender, EventArgs e)
         {
-            btnChange.BackColor = Color.Cyan;
+            button1.BackColor = Color.Cyan;
         }
 
         private void btnChange_MouseLeave(object sender, EventArgs e)
         {
-            btnChange.BackColor = Color.White;
+            button1.BackColor = Color.White;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (user_old_pass.Text == BL.User.user.sf_pass)
+            {
+                if (user_new_pass.Text == user_new_pass_re.Text && user_new_pass.Text != "")
+                {
+                    BL.User.user.sf_pass = user_new_pass.Text;
+                    BL.table_opration.staff.update(BL.User.user);
+                }
+                else
+                {
+                    MessageBox.Show("new password and re-type do not match or u did not put password");
+                }
+            }
+            else
+                MessageBox.Show("wrong old password");
         }
     }
 }
