@@ -38,3 +38,12 @@ C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\
 C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.csproj.CopyComplete
 C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.exe
 C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library-Mangement-system.pdb
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.ChatRoom.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Info.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Login.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Menu_control.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.return_book.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Update_user_infos.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.User_Employee.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.User_info_controller.resources
+C:\Users\Dell\LibraryProject\Library-Management-system\Library-Mangement-system\Library-Mangement-system\obj\Debug\Library_Mangement_system.PL.Welcome.resources

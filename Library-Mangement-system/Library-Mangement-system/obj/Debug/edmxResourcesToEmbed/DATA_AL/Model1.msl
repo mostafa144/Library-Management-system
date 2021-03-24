@@ -82,7 +82,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="staff">
+    <EntitySetMapping Name="staffs">
       <EntityTypeMapping TypeName="LibraryModel.staff">
         <MappingFragment StoreEntitySet="staff">
           <ScalarProperty Name="sf_id" ColumnName="sf_id" />
