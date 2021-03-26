@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Sockets;
 using System.Net;
+using System.Net.Sockets;
 
 namespace Library_Mangement_system.PL
 {
@@ -18,9 +18,38 @@ namespace Library_Mangement_system.PL
         Socket sck;
         EndPoint epLocal, epRemote;
         byte[] buffer;
-        public ChatRoom() 
+        public ChatRoom()
         {
             InitializeComponent();
+        }
+
+        private void buttonConnect_Click(object sender, EventArgs e)
+        {
+            if (textLocalPort.Text == "" && textRemotePort.Text == "")
+            {
+                MessageBox.Show("Type your port first");
+            }
+            else
+            {
+                MessageBox.Show("you are connected now");
+            }
+
+            // binding Socket
+            IPAddress Local = IPAddress.Parse(textLocalIp.Text);
+            epLocal = new IPEndPoint(Local, Convert.ToInt32(textLocalPort.Text));
+            sck.Bind(epLocal);
+            // Connecting to remote IP
+            IPAddress Remote = IPAddress.Parse(textLocalIp.Text);
+            epRemote = new IPEndPoint(Remote, Convert.ToInt32(textRemotePort.Text));
+            sck.Connect(epRemote);
+            //Listening the specific port
+            buffer = new byte[1500];
+            sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new
+                 AsyncCallback(MessageCallBack), buffer);
+            ofAbdo.Checked = false;
+            onAbdo.Checked = true;
+            ofmostafa.Checked = false;
+            onMostafa.Checked = true;
         }
 
         private void ChatRoom_Load(object sender, EventArgs e)
@@ -30,37 +59,52 @@ namespace Library_Mangement_system.PL
             sck.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
             //Get user IP
-            txtLocalIp.Text = GetLocalIP();
-            txtRemoteIP.Text = GetLocalIP();
+            textLocalIp.Text = GetLocalIP();
+            textRemoteIP.Text = GetLocalIP();
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            // binding Socket
-            IPAddress Local = IPAddress.Parse(txtLocalIp.Text);
-            epLocal = new IPEndPoint(Local, Convert.ToInt32(txtLocalPort.Text));
-            sck.Bind(epLocal);
-            // Connecting to remote IP
-            IPAddress Remote = IPAddress.Parse(txtLocalIp.Text);
-            epRemote = new IPEndPoint(Remote, Convert.ToInt32(txtRemotePort.Text));
-            sck.Connect(epRemote);
-            //Listening the specific port
-            buffer = new byte[1500];
-            sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new
-                 AsyncCallback(MessageCallBack), buffer);
-        }
-
-        private void btnSend_Click(object sender, EventArgs e)
+        private void buttonSend_Click(object sender, EventArgs e)
         {
             // Convert String Message to byte[]
+            // send from Me to Abdallah
             ASCIIEncoding aEnocding = new ASCIIEncoding();
             byte[] sendingMessage = new byte[1500];
-            sendingMessage = aEnocding.GetBytes(txtScreen.Text);
+            sendingMessage = aEnocding.GetBytes(textMessage.Text);
             //Sending the Encoded message
             sck.Send(sendingMessage);
             //adding to the listbox
-            txtScreen.Items.Add("Me:  " + txtMessage.Text);
-            txtMessage.Text = "";
+            if (textMessage.Text != "")
+            {
+                txtMessage.Items.Add("Abdallah :  " + textMessage.Text);
+                txtScreen.Items.Add("Me :  " + textMessage.Text);
+                textMessage.Text = "";
+            }
+            else
+            {
+                textMessage.Focus();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // send from Abdallah To Me
+            ASCIIEncoding bEnocding = new ASCIIEncoding();
+            byte[] sendingMessage2 = new byte[1500];
+            sendingMessage2 = bEnocding.GetBytes(txtMessage2.Text);
+            //Sending the Encoded message
+            sck.Send(sendingMessage2);
+            //adding to the listbox
+            if (txtMessage2.Text != "")
+            {
+                txtScreen.Items.Add("Mostafa :  " + txtMessage2.Text);
+                txtMessage.Items.Add("Me :  " + txtMessage2.Text);
+                txtMessage2.Text = "";
+            }
+            else
+            {
+                txtMessage2.Focus();
+            }
+
         }
 
         private void MessageCallBack(IAsyncResult aResult)
@@ -74,15 +118,16 @@ namespace Library_Mangement_system.PL
                 ASCIIEncoding aSCIIEncoding = new ASCIIEncoding();
                 String receiveMessage = aSCIIEncoding.GetString(receiveData);
                 // Adding This Message into listbox
-                txtScreen.Items.Add("Abd allah:  " + receiveMessage);
+
                 buffer = new byte[1500];
                 sck.BeginReceiveFrom(buffer, 0, buffer.Length, SocketFlags.None, ref epRemote, new AsyncCallback(MessageCallBack), buffer);
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
         }
         private string GetLocalIP() //Get Local IP
         {

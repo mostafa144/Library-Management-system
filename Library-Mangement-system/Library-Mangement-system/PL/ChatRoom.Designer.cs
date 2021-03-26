@@ -29,155 +29,284 @@ namespace Library_Mangement_system.PL
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRemoteIP = new System.Windows.Forms.TextBox();
-            this.txtLocalIp = new System.Windows.Forms.TextBox();
-            this.entityConnection1 = new System.Data.Entity.Core.EntityClient.EntityConnection();
-            this.txtLocalPort = new System.Windows.Forms.TextBox();
-            this.txtRemotePort = new System.Windows.Forms.TextBox();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.btnConnect = new System.Windows.Forms.Button();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.labelLocalIP = new System.Windows.Forms.Label();
+            this.buttonSend = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonConnect = new System.Windows.Forms.Button();
+            this.textLocalIp = new System.Windows.Forms.TextBox();
+            this.textLocalPort = new System.Windows.Forms.TextBox();
+            this.textRemoteIP = new System.Windows.Forms.TextBox();
+            this.txtMessage2 = new System.Windows.Forms.TextBox();
+            this.textMessage = new System.Windows.Forms.TextBox();
+            this.txtScreen = new System.Windows.Forms.ListBox();
+            this.txtMessage = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.IP = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Port = new System.Windows.Forms.Label();
-            this.txtScreen = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textRemotePort = new System.Windows.Forms.TextBox();
+            this.ofmostafa = new System.Windows.Forms.RadioButton();
+            this.onMostafa = new System.Windows.Forms.RadioButton();
+            this.onAbdo = new System.Windows.Forms.RadioButton();
+            this.ofAbdo = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtRemoteIP
+            // buttonSend
             // 
-            this.txtRemoteIP.Location = new System.Drawing.Point(592, 21);
-            this.txtRemoteIP.Name = "txtRemoteIP";
-            this.txtRemoteIP.Size = new System.Drawing.Size(167, 22);
-            this.txtRemoteIP.TabIndex = 0;
+            this.buttonSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSend.Location = new System.Drawing.Point(993, 497);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(106, 33);
+            this.buttonSend.TabIndex = 0;
+            this.buttonSend.Text = "send";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
-            // txtLocalIp
+            // button2
             // 
-            this.txtLocalIp.Location = new System.Drawing.Point(207, 24);
-            this.txtLocalIp.Name = "txtLocalIp";
-            this.txtLocalIp.Size = new System.Drawing.Size(160, 22);
-            this.txtLocalIp.TabIndex = 1;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(441, 493);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 29);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "send2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtLocalPort
+            // buttonConnect
             // 
-            this.txtLocalPort.Location = new System.Drawing.Point(207, 65);
-            this.txtLocalPort.Name = "txtLocalPort";
-            this.txtLocalPort.Size = new System.Drawing.Size(160, 22);
-            this.txtLocalPort.TabIndex = 2;
+            this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConnect.Location = new System.Drawing.Point(488, 184);
+            this.buttonConnect.Name = "buttonConnect";
+            this.buttonConnect.Size = new System.Drawing.Size(212, 39);
+            this.buttonConnect.TabIndex = 2;
+            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.UseVisualStyleBackColor = true;
+            this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
-            // txtRemotePort
+            // textLocalIp
             // 
-            this.txtRemotePort.Location = new System.Drawing.Point(592, 62);
-            this.txtRemotePort.Name = "txtRemotePort";
-            this.txtRemotePort.Size = new System.Drawing.Size(167, 22);
-            this.txtRemotePort.TabIndex = 3;
+            this.textLocalIp.Location = new System.Drawing.Point(103, 21);
+            this.textLocalIp.Name = "textLocalIp";
+            this.textLocalIp.Size = new System.Drawing.Size(139, 22);
+            this.textLocalIp.TabIndex = 3;
             // 
-            // txtMessage
+            // textLocalPort
             // 
-            this.txtMessage.Location = new System.Drawing.Point(144, 416);
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(578, 22);
-            this.txtMessage.TabIndex = 5;
+            this.textLocalPort.Location = new System.Drawing.Point(103, 62);
+            this.textLocalPort.Name = "textLocalPort";
+            this.textLocalPort.Size = new System.Drawing.Size(139, 22);
+            this.textLocalPort.TabIndex = 4;
             // 
-            // btnConnect
+            // textRemoteIP
             // 
-            this.btnConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.btnConnect.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnConnect.Location = new System.Drawing.Point(12, 407);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(102, 31);
-            this.btnConnect.TabIndex = 6;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            this.textRemoteIP.Location = new System.Drawing.Point(74, 32);
+            this.textRemoteIP.Name = "textRemoteIP";
+            this.textRemoteIP.Size = new System.Drawing.Size(162, 22);
+            this.textRemoteIP.TabIndex = 5;
             // 
-            // btnSend
+            // txtMessage2
             // 
-            this.btnSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.btnSend.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSend.Location = new System.Drawing.Point(761, 410);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(98, 34);
-            this.btnSend.TabIndex = 7;
-            this.btnSend.Text = "Send";
-            this.btnSend.UseVisualStyleBackColor = false;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.txtMessage2.Location = new System.Drawing.Point(55, 497);
+            this.txtMessage2.Name = "txtMessage2";
+            this.txtMessage2.Size = new System.Drawing.Size(367, 22);
+            this.txtMessage2.TabIndex = 6;
             // 
-            // labelLocalIP
+            // textMessage
             // 
-            this.labelLocalIP.AutoSize = true;
-            this.labelLocalIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocalIP.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelLocalIP.Location = new System.Drawing.Point(145, 25);
-            this.labelLocalIP.Name = "labelLocalIP";
-            this.labelLocalIP.Size = new System.Drawing.Size(32, 25);
-            this.labelLocalIP.TabIndex = 8;
-            this.labelLocalIP.Text = "IP";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(145, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Port";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(494, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 25);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "IP";
-            // 
-            // Port
-            // 
-            this.Port.AutoSize = true;
-            this.Port.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Port.ForeColor = System.Drawing.Color.Snow;
-            this.Port.Location = new System.Drawing.Point(494, 65);
-            this.Port.Name = "Port";
-            this.Port.Size = new System.Drawing.Size(49, 25);
-            this.Port.TabIndex = 11;
-            this.Port.Text = "port";
+            this.textMessage.Location = new System.Drawing.Point(620, 497);
+            this.textMessage.Name = "textMessage";
+            this.textMessage.Size = new System.Drawing.Size(350, 22);
+            this.textMessage.TabIndex = 7;
             // 
             // txtScreen
             // 
             this.txtScreen.FormattingEnabled = true;
             this.txtScreen.ItemHeight = 16;
-            this.txtScreen.Location = new System.Drawing.Point(144, 113);
+            this.txtScreen.Location = new System.Drawing.Point(620, 251);
             this.txtScreen.Name = "txtScreen";
-            this.txtScreen.Size = new System.Drawing.Size(615, 276);
-            this.txtScreen.TabIndex = 12;
+            this.txtScreen.Size = new System.Drawing.Size(479, 228);
+            this.txtScreen.TabIndex = 8;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.FormattingEnabled = true;
+            this.txtMessage.ItemHeight = 16;
+            this.txtMessage.Location = new System.Drawing.Point(55, 251);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(474, 228);
+            this.txtMessage.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.IP);
+            this.groupBox1.Controls.Add(this.textLocalPort);
+            this.groupBox1.Controls.Add(this.textLocalIp);
+            this.groupBox1.Location = new System.Drawing.Point(71, 40);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(271, 100);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.textRemotePort);
+            this.groupBox2.Controls.Add(this.textRemoteIP);
+            this.groupBox2.Location = new System.Drawing.Point(779, 40);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(275, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // IP
+            // 
+            this.IP.AutoSize = true;
+            this.IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IP.Location = new System.Drawing.Point(17, 21);
+            this.IP.Name = "IP";
+            this.IP.Size = new System.Drawing.Size(28, 24);
+            this.IP.TabIndex = 5;
+            this.IP.Text = "IP";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(17, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 24);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Port";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(774, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 29);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Abdullah Chat";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(66, 189);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 29);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Mostafa Chat";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "IP";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(18, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 24);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Port";
+            // 
+            // textRemotePort
+            // 
+            this.textRemotePort.Location = new System.Drawing.Point(74, 62);
+            this.textRemotePort.Name = "textRemotePort";
+            this.textRemotePort.Size = new System.Drawing.Size(162, 22);
+            this.textRemotePort.TabIndex = 11;
+            // 
+            // ofmostafa
+            // 
+            this.ofmostafa.AutoSize = true;
+            this.ofmostafa.Location = new System.Drawing.Point(251, 184);
+            this.ofmostafa.Name = "ofmostafa";
+            this.ofmostafa.Size = new System.Drawing.Size(79, 21);
+            this.ofmostafa.TabIndex = 11;
+            this.ofmostafa.TabStop = true;
+            this.ofmostafa.Text = "Off Line";
+            this.ofmostafa.UseVisualStyleBackColor = true;
+            // 
+            // onMostafa
+            // 
+            this.onMostafa.AutoSize = true;
+            this.onMostafa.Location = new System.Drawing.Point(251, 224);
+            this.onMostafa.Name = "onMostafa";
+            this.onMostafa.Size = new System.Drawing.Size(70, 21);
+            this.onMostafa.TabIndex = 12;
+            this.onMostafa.TabStop = true;
+            this.onMostafa.Text = "Online";
+            this.onMostafa.UseVisualStyleBackColor = true;
+            // 
+            // onAbdo
+            // 
+            this.onAbdo.AutoSize = true;
+            this.onAbdo.Location = new System.Drawing.Point(989, 224);
+            this.onAbdo.Name = "onAbdo";
+            this.onAbdo.Size = new System.Drawing.Size(70, 21);
+            this.onAbdo.TabIndex = 13;
+            this.onAbdo.TabStop = true;
+            this.onAbdo.Text = "Online";
+            this.onAbdo.UseVisualStyleBackColor = true;
+            // 
+            // ofAbdo
+            // 
+            this.ofAbdo.AutoSize = true;
+            this.ofAbdo.Location = new System.Drawing.Point(989, 187);
+            this.ofAbdo.Name = "ofAbdo";
+            this.ofAbdo.Size = new System.Drawing.Size(79, 21);
+            this.ofAbdo.TabIndex = 14;
+            this.ofAbdo.TabStop = true;
+            this.ofAbdo.Text = "Off Line";
+            this.ofAbdo.UseVisualStyleBackColor = true;
             // 
             // ChatRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(887, 484);
-            this.Controls.Add(this.txtScreen);
-            this.Controls.Add(this.Port);
+            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.ClientSize = new System.Drawing.Size(1161, 584);
+            this.Controls.Add(this.ofAbdo);
+            this.Controls.Add(this.onAbdo);
+            this.Controls.Add(this.onMostafa);
+            this.Controls.Add(this.ofmostafa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelLocalIP);
-            this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtMessage);
-            this.Controls.Add(this.txtRemotePort);
-            this.Controls.Add(this.txtLocalPort);
-            this.Controls.Add(this.txtLocalIp);
-            this.Controls.Add(this.txtRemoteIP);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.Controls.Add(this.txtScreen);
+            this.Controls.Add(this.textMessage);
+            this.Controls.Add(this.txtMessage2);
+            this.Controls.Add(this.buttonConnect);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonSend);
             this.Name = "ChatRoom";
             this.Text = "ChatRoom";
             this.Load += new System.EventHandler(this.ChatRoom_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,18 +314,28 @@ namespace Library_Mangement_system.PL
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtRemoteIP;
-        private System.Windows.Forms.TextBox txtLocalIp;
-        private System.Data.Entity.Core.EntityClient.EntityConnection entityConnection1;
-        private System.Windows.Forms.TextBox txtLocalPort;
-        private System.Windows.Forms.TextBox txtRemotePort;
-        private System.Windows.Forms.TextBox txtMessage;
-        private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label labelLocalIP;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label Port;
+        private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonConnect;
+        private System.Windows.Forms.TextBox textLocalIp;
+        private System.Windows.Forms.TextBox textLocalPort;
+        private System.Windows.Forms.TextBox textRemoteIP;
+        private System.Windows.Forms.TextBox txtMessage2;
+        private System.Windows.Forms.TextBox textMessage;
         private System.Windows.Forms.ListBox txtScreen;
+        private System.Windows.Forms.ListBox txtMessage;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label IP;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textRemotePort;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton ofmostafa;
+        private System.Windows.Forms.RadioButton onMostafa;
+        private System.Windows.Forms.RadioButton onAbdo;
+        private System.Windows.Forms.RadioButton ofAbdo;
     }
 }
