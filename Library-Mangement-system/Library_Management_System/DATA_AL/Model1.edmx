@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LibraryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="LibraryModelStoreContainer">
+          <EntitySet Name="author" EntityType="LibraryModel.Store.author" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="book" EntityType="LibraryModel.Store.book" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="borrow" EntityType="LibraryModel.Store.borrow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="borrower" EntityType="LibraryModel.Store.borrower" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="categorie" EntityType="LibraryModel.Store.categorie" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="log" EntityType="LibraryModel.Store.log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MM_borrow" EntityType="LibraryModel.Store.MM_borrow" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MM_publish" EntityType="LibraryModel.Store.MM_publish" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="publisher" EntityType="LibraryModel.Store.publisher" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staff" EntityType="LibraryModel.Store.staff" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="LibraryModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_book_author" Association="LibraryModel.Store.FK_book_author">
+            <End Role="author" EntitySet="author" />
+            <End Role="book" EntitySet="book" />
+          </AssociationSet>
+          <AssociationSet Name="FK_book_categorie" Association="LibraryModel.Store.FK_book_categorie">
+            <End Role="categorie" EntitySet="categorie" />
+            <End Role="book" EntitySet="book" />
+          </AssociationSet>
+          <AssociationSet Name="FK_borrow_borrower" Association="LibraryModel.Store.FK_borrow_borrower">
+            <End Role="borrower" EntitySet="borrower" />
+            <End Role="borrow" EntitySet="borrow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_log_staff" Association="LibraryModel.Store.FK_log_staff">
+            <End Role="staff" EntitySet="staff" />
+            <End Role="log" EntitySet="log" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MM_borrow_book" Association="LibraryModel.Store.FK_MM_borrow_book">
+            <End Role="book" EntitySet="book" />
+            <End Role="MM_borrow" EntitySet="MM_borrow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MM_borrow_borrow" Association="LibraryModel.Store.FK_MM_borrow_borrow">
+            <End Role="borrow" EntitySet="borrow" />
+            <End Role="MM_borrow" EntitySet="MM_borrow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MM_publish_book" Association="LibraryModel.Store.FK_MM_publish_book">
+            <End Role="book" EntitySet="book" />
+            <End Role="MM_publish" EntitySet="MM_publish" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MM_publish_publisher" Association="LibraryModel.Store.FK_MM_publish_publisher">
+            <End Role="publisher" EntitySet="publisher" />
+            <End Role="MM_publish" EntitySet="MM_publish" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="ah_id" />
+          </Key>
+          <Property Name="ah_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ah_name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="book">
+          <Key>
+            <PropertyRef Name="bk_id" />
+          </Key>
+          <Property Name="bk_id" Type="int" Nullable="false" />
+          <Property Name="bk_name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="bk_pages" Type="int" />
+          <Property Name="map_plates" Type="nvarchar" MaxLength="50" />
+          <Property Name="bk_rate" Type="int" />
+          <Property Name="bk_notes" Type="nvarchar" MaxLength="50" />
+          <Property Name="language" Type="nvarchar" MaxLength="50" />
+          <Property Name="bk_volume" Type="int" />
+          <Property Name="publication_year" Type="date" />
+          <Property Name="authors_id" Type="int" />
+          <Property Name="price" Type="float" />
+          <Property Name="bk_entry_date" Type="date" />
+          <Property Name="del" Type="bit" />
+          <Property Name="bk_parts" Type="int" />
+          <Property Name="categories_id" Type="int" />
+        </EntityType>
+        <EntityType Name="borrow">
+          <Key>
+            <PropertyRef Name="br_id" />
+          </Key>
+          <Property Name="br_id" Type="int" Nullable="false" />
+          <Property Name="borrower_id" Type="int" />
+          <Property Name="br_dateOut" Type="date" />
+          <Property Name="br_dateIn" Type="date" />
+          <Property Name="returned" Type="bit" />
+        </EntityType>
+        <EntityType Name="borrower">
+          <Key>
+            <PropertyRef Name="bwr_id" />
+          </Key>
+          <Property Name="bwr_id" Type="int" Nullable="false" />
+          <Property Name="bwr_name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="bwr_address" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="bwr_code" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="bwr_phone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="bwr_rank" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="ct_id" />
+          </Key>
+          <Property Name="ct_id" Type="int" Nullable="false" />
+          <Property Name="ct_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="lg_id" />
+          </Key>
+          <Property Name="staff_id" Type="int" Nullable="false" />
+          <Property Name="lg_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="lg_date" Type="date" Nullable="false" />
+          <Property Name="process" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="table_name" Type="nchar" MaxLength="10" />
+          <Property Name="opration_kind" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="MM_borrow">
+          <Key>
+            <PropertyRef Name="borrow_id" />
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="borrow_id" Type="int" Nullable="false" />
+          <Property Name="book_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MM_publish">
+          <Key>
+            <PropertyRef Name="publisher_id" />
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="publisher_id" Type="int" Nullable="false" />
+          <Property Name="book_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="publisher">
+          <Key>
+            <PropertyRef Name="pp_id" />
+          </Key>
+          <Property Name="pp_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pp_name" Type="varchar" MaxLength="50" />
+          <Property Name="pp_address" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="sf_id" />
+          </Key>
+          <Property Name="sf_id" Type="int" Nullable="false" />
+          <Property Name="sf_user" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sf_pass" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sf_ssn" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sf_phone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="sf_adress" Type="varchar" MaxLength="50" />
+          <Property Name="accessablity" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_book_author">
+          <End Role="author" Type="LibraryModel.Store.author" Multiplicity="0..1" />
+          <End Role="book" Type="LibraryModel.Store.book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="author">
+              <PropertyRef Name="ah_id" />
+            </Principal>
+            <Dependent Role="book">
+              <PropertyRef Name="authors_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_book_categorie">
+          <End Role="categorie" Type="LibraryModel.Store.categorie" Multiplicity="0..1" />
+          <End Role="book" Type="LibraryModel.Store.book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="ct_id" />
+            </Principal>
+            <Dependent Role="book">
+              <PropertyRef Name="categories_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_borrow_borrower">
+          <End Role="borrower" Type="LibraryModel.Store.borrower" Multiplicity="0..1" />
+          <End Role="borrow" Type="LibraryModel.Store.borrow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="borrower">
+              <PropertyRef Name="bwr_id" />
+            </Principal>
+            <Dependent Role="borrow">
+              <PropertyRef Name="borrower_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_log_staff">
+          <End Role="staff" Type="LibraryModel.Store.staff" Multiplicity="1" />
+          <End Role="log" Type="LibraryModel.Store.log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="sf_id" />
+            </Principal>
+            <Dependent Role="log">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MM_borrow_book">
+          <End Role="book" Type="LibraryModel.Store.book" Multiplicity="1" />
+          <End Role="MM_borrow" Type="LibraryModel.Store.MM_borrow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="bk_id" />
+            </Principal>
+            <Dependent Role="MM_borrow">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MM_borrow_borrow">
+          <End Role="borrow" Type="LibraryModel.Store.borrow" Multiplicity="1" />
+          <End Role="MM_borrow" Type="LibraryModel.Store.MM_borrow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="borrow">
+              <PropertyRef Name="br_id" />
+            </Principal>
+            <Dependent Role="MM_borrow">
+              <PropertyRef Name="borrow_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MM_publish_book">
+          <End Role="book" Type="LibraryModel.Store.book" Multiplicity="1" />
+          <End Role="MM_publish" Type="LibraryModel.Store.MM_publish" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="book">
+              <PropertyRef Name="bk_id" />
+            </Principal>
+            <Dependent Role="MM_publish">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MM_publish_publisher">
+          <End Role="publisher" Type="LibraryModel.Store.publisher" Multiplicity="1" />
+          <End Role="MM_publish" Type="LibraryModel.Store.MM_publish" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="publisher">
+              <PropertyRef Name="pp_id" />
+            </Principal>
+            <Dependent Role="MM_publish">
+              <PropertyRef Name="publisher_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LibraryEntities5" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="authors" EntityType="LibraryModel.author" />
+          <EntitySet Name="books" EntityType="LibraryModel.book" />
+          <EntitySet Name="borrows" EntityType="LibraryModel.borrow" />
+          <EntitySet Name="borrowers" EntityType="LibraryModel.borrower" />
+          <EntitySet Name="categories" EntityType="LibraryModel.categorie" />
+          <EntitySet Name="logs" EntityType="LibraryModel.log" />
+          <EntitySet Name="publishers" EntityType="LibraryModel.publisher" />
+          <EntitySet Name="staffs" EntityType="LibraryModel.staff" />
+          <EntitySet Name="sysdiagrams" EntityType="LibraryModel.sysdiagram" />
+          <AssociationSet Name="FK_book_author" Association="LibraryModel.FK_book_author">
+            <End Role="author" EntitySet="authors" />
+            <End Role="book" EntitySet="books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_book_categorie" Association="LibraryModel.FK_book_categorie">
+            <End Role="categorie" EntitySet="categories" />
+            <End Role="book" EntitySet="books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_borrow_borrower" Association="LibraryModel.FK_borrow_borrower">
+            <End Role="borrower" EntitySet="borrowers" />
+            <End Role="borrow" EntitySet="borrows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_log_staff" Association="LibraryModel.FK_log_staff">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="log" EntitySet="logs" />
+          </AssociationSet>
+          <AssociationSet Name="MM_borrow" Association="LibraryModel.MM_borrow">
+            <End Role="book" EntitySet="books" />
+            <End Role="borrow" EntitySet="borrows" />
+          </AssociationSet>
+          <AssociationSet Name="MM_publish" Association="LibraryModel.MM_publish">
+            <End Role="book" EntitySet="books" />
+            <End Role="publisher" EntitySet="publishers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="author">
+          <Key>
+            <PropertyRef Name="ah_id" />
+          </Key>
+          <Property Name="ah_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ah_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="books" Relationship="LibraryModel.FK_book_author" FromRole="author" ToRole="book" />
+        </EntityType>
+        <EntityType Name="book">
+          <Key>
+            <PropertyRef Name="bk_id" />
+          </Key>
+          <Property Name="bk_id" Type="Int32" Nullable="false" />
+          <Property Name="bk_name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="bk_pages" Type="Int32" />
+          <Property Name="map_plates" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="bk_rate" Type="Int32" />
+          <Property Name="bk_notes" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="language" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="bk_volume" Type="Int32" />
+          <Property Name="publication_year" Type="DateTime" Precision="0" />
+          <Property Name="authors_id" Type="Int32" />
+          <Property Name="price" Type="Double" />
+          <Property Name="bk_entry_date" Type="DateTime" Precision="0" />
+          <Property Name="del" Type="Boolean" />
+          <Property Name="bk_parts" Type="Int32" />
+          <Property Name="categories_id" Type="Int32" />
+          <NavigationProperty Name="author" Relationship="LibraryModel.FK_book_author" FromRole="book" ToRole="author" />
+          <NavigationProperty Name="categorie" Relationship="LibraryModel.FK_book_categorie" FromRole="book" ToRole="categorie" />
+          <NavigationProperty Name="borrows" Relationship="LibraryModel.MM_borrow" FromRole="book" ToRole="borrow" />
+          <NavigationProperty Name="publishers" Relationship="LibraryModel.MM_publish" FromRole="book" ToRole="publisher" />
+        </EntityType>
+        <EntityType Name="borrow">
+          <Key>
+            <PropertyRef Name="br_id" />
+          </Key>
+          <Property Name="br_id" Type="Int32" Nullable="false" />
+          <Property Name="borrower_id" Type="Int32" />
+          <Property Name="br_dateOut" Type="DateTime" Precision="0" />
+          <Property Name="br_dateIn" Type="DateTime" Precision="0" />
+          <Property Name="returned" Type="Boolean" />
+          <NavigationProperty Name="borrower" Relationship="LibraryModel.FK_borrow_borrower" FromRole="borrow" ToRole="borrower" />
+          <NavigationProperty Name="books" Relationship="LibraryModel.MM_borrow" FromRole="borrow" ToRole="book" />
+        </EntityType>
+        <EntityType Name="borrower">
+          <Key>
+            <PropertyRef Name="bwr_id" />
+          </Key>
+          <Property Name="bwr_id" Type="Int32" Nullable="false" />
+          <Property Name="bwr_name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bwr_address" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bwr_code" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bwr_phone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="bwr_rank" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="borrows" Relationship="LibraryModel.FK_borrow_borrower" FromRole="borrower" ToRole="borrow" />
+        </EntityType>
+        <EntityType Name="categorie">
+          <Key>
+            <PropertyRef Name="ct_id" />
+          </Key>
+          <Property Name="ct_id" Type="Int32" Nullable="false" />
+          <Property Name="ct_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="books" Relationship="LibraryModel.FK_book_categorie" FromRole="categorie" ToRole="book" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="lg_id" />
+          </Key>
+          <Property Name="staff_id" Type="Int32" Nullable="false" />
+          <Property Name="lg_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="lg_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="process" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="table_name" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="opration_kind" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <NavigationProperty Name="staff" Relationship="LibraryModel.FK_log_staff" FromRole="log" ToRole="staff" />
+        </EntityType>
+        <EntityType Name="publisher">
+          <Key>
+            <PropertyRef Name="pp_id" />
+          </Key>
+          <Property Name="pp_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="pp_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="pp_address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="books" Relationship="LibraryModel.MM_publish" FromRole="publisher" ToRole="book" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="sf_id" />
+          </Key>
+          <Property Name="sf_id" Type="Int32" Nullable="false" />
+          <Property Name="sf_user" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sf_pass" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sf_ssn" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sf_phone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="sf_adress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="accessablity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="logs" Relationship="LibraryModel.FK_log_staff" FromRole="staff" ToRole="log" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_book_author">
+          <End Role="author" Type="LibraryModel.author" Multiplicity="0..1" />
+          <End Role="book" Type="LibraryModel.book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="author">
+              <PropertyRef Name="ah_id" />
+            </Principal>
+            <Dependent Role="book">
+              <PropertyRef Name="authors_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_book_categorie">
+          <End Role="categorie" Type="LibraryModel.categorie" Multiplicity="0..1" />
+          <End Role="book" Type="LibraryModel.book" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categorie">
+              <PropertyRef Name="ct_id" />
+            </Principal>
+            <Dependent Role="book">
+              <PropertyRef Name="categories_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_borrow_borrower">
+          <End Role="borrower" Type="LibraryModel.borrower" Multiplicity="0..1" />
+          <End Role="borrow" Type="LibraryModel.borrow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="borrower">
+              <PropertyRef Name="bwr_id" />
+            </Principal>
+            <Dependent Role="borrow">
+              <PropertyRef Name="borrower_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_log_staff">
+          <End Role="staff" Type="LibraryModel.staff" Multiplicity="1" />
+          <End Role="log" Type="LibraryModel.log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="sf_id" />
+            </Principal>
+            <Dependent Role="log">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MM_borrow">
+          <End Role="book" Type="LibraryModel.book" Multiplicity="*" />
+          <End Role="borrow" Type="LibraryModel.borrow" Multiplicity="*" />
+        </Association>
+        <Association Name="MM_publish">
+          <End Role="book" Type="LibraryModel.book" Multiplicity="*" />
+          <End Role="publisher" Type="LibraryModel.publisher" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryModelStoreContainer" CdmEntityContainer="LibraryEntities5">
+          <EntitySetMapping Name="authors">
+            <EntityTypeMapping TypeName="LibraryModel.author">
+              <MappingFragment StoreEntitySet="author">
+                <ScalarProperty Name="ah_id" ColumnName="ah_id" />
+                <ScalarProperty Name="ah_name" ColumnName="ah_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="books">
+            <EntityTypeMapping TypeName="LibraryModel.book">
+              <MappingFragment StoreEntitySet="book">
+                <ScalarProperty Name="bk_id" ColumnName="bk_id" />
+                <ScalarProperty Name="bk_name" ColumnName="bk_name" />
+                <ScalarProperty Name="bk_pages" ColumnName="bk_pages" />
+                <ScalarProperty Name="map_plates" ColumnName="map_plates" />
+                <ScalarProperty Name="bk_rate" ColumnName="bk_rate" />
+                <ScalarProperty Name="bk_notes" ColumnName="bk_notes" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="bk_volume" ColumnName="bk_volume" />
+                <ScalarProperty Name="publication_year" ColumnName="publication_year" />
+                <ScalarProperty Name="authors_id" ColumnName="authors_id" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="bk_entry_date" ColumnName="bk_entry_date" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="bk_parts" ColumnName="bk_parts" />
+                <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="borrows">
+            <EntityTypeMapping TypeName="LibraryModel.borrow">
+              <MappingFragment StoreEntitySet="borrow">
+                <ScalarProperty Name="br_id" ColumnName="br_id" />
+                <ScalarProperty Name="borrower_id" ColumnName="borrower_id" />
+                <ScalarProperty Name="br_dateOut" ColumnName="br_dateOut" />
+                <ScalarProperty Name="br_dateIn" ColumnName="br_dateIn" />
+                <ScalarProperty Name="returned" ColumnName="returned" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="borrowers">
+            <EntityTypeMapping TypeName="LibraryModel.borrower">
+              <MappingFragment StoreEntitySet="borrower">
+                <ScalarProperty Name="bwr_id" ColumnName="bwr_id" />
+                <ScalarProperty Name="bwr_name" ColumnName="bwr_name" />
+                <ScalarProperty Name="bwr_address" ColumnName="bwr_address" />
+                <ScalarProperty Name="bwr_code" ColumnName="bwr_code" />
+                <ScalarProperty Name="bwr_phone" ColumnName="bwr_phone" />
+                <ScalarProperty Name="bwr_rank" ColumnName="bwr_rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="categories">
+            <EntityTypeMapping TypeName="LibraryModel.categorie">
+              <MappingFragment StoreEntitySet="categorie">
+                <ScalarProperty Name="ct_id" ColumnName="ct_id" />
+                <ScalarProperty Name="ct_name" ColumnName="ct_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logs">
+            <EntityTypeMapping TypeName="LibraryModel.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="lg_id" ColumnName="lg_id" />
+                <ScalarProperty Name="lg_date" ColumnName="lg_date" />
+                <ScalarProperty Name="process" ColumnName="process" />
+                <ScalarProperty Name="table_name" ColumnName="table_name" />
+                <ScalarProperty Name="opration_kind" ColumnName="opration_kind" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="publishers">
+            <EntityTypeMapping TypeName="LibraryModel.publisher">
+              <MappingFragment StoreEntitySet="publisher">
+                <ScalarProperty Name="pp_id" ColumnName="pp_id" />
+                <ScalarProperty Name="pp_name" ColumnName="pp_name" />
+                <ScalarProperty Name="pp_address" ColumnName="pp_address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="LibraryModel.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="sf_id" ColumnName="sf_id" />
+                <ScalarProperty Name="sf_user" ColumnName="sf_user" />
+                <ScalarProperty Name="sf_pass" ColumnName="sf_pass" />
+                <ScalarProperty Name="sf_ssn" ColumnName="sf_ssn" />
+                <ScalarProperty Name="sf_phone" ColumnName="sf_phone" />
+                <ScalarProperty Name="sf_adress" ColumnName="sf_adress" />
+                <ScalarProperty Name="accessablity" ColumnName="accessablity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="LibraryModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MM_borrow" TypeName="LibraryModel.MM_borrow" StoreEntitySet="MM_borrow">
+            <EndProperty Name="book">
+              <ScalarProperty Name="bk_id" ColumnName="book_id" />
+            </EndProperty>
+            <EndProperty Name="borrow">
+              <ScalarProperty Name="br_id" ColumnName="borrow_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MM_publish" TypeName="LibraryModel.MM_publish" StoreEntitySet="MM_publish">
+            <EndProperty Name="book">
+              <ScalarProperty Name="bk_id" ColumnName="book_id" />
+            </EndProperty>
+            <EndProperty Name="publisher">
+              <ScalarProperty Name="pp_id" ColumnName="publisher_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
