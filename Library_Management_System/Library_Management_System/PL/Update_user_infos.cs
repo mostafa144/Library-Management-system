@@ -65,6 +65,8 @@ namespace Library_Management_System
                     BL.User.user.sf_phone =  user_phone.Text;
                     BL.User.user.sf_ssn =    user_ssn.Text;
                     BL.table_opration.staff.update(BL.User.user);
+                    MessageBox.Show("Your persinal infos updated successfully");
+
                     this.Close();
                 }
                 else

@@ -17,9 +17,9 @@ namespace Library_Management_System.PL
         public Employee_Search()
         {
             InitializeComponent();
-            lbl1.Text = "Date is : " + DateTime.Now + "                                       Powered By : ITI Students (Mostafa, Ali, AbdUllah)";
-            list = BL.table_opration.book.search(search.Text);
-            dataGrid_book.DataSource = BL.table_view.book.Convert_to_books_views(list);
+        //    lbl1.Text = "Date is : " + DateTime.Now + "                                       Powered By : ITI Students (Mostafa, Ali, AbdUllah)";
+        //    list = BL.table_opration.book.search(search.Text);
+        //    dataGrid_book.DataSource = BL.table_view.book.Convert_to_books_views(list);
         }
 
         private void search_TextChanged(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace Library_Management_System.PL
             search.BackColor = Color.FromArgb(26, 32, 40);
             label2.BackColor = Color.FromArgb(26, 32, 40);
             button2.BackColor = Color.FromArgb(26, 32, 40);
-            statusStrip1.BackColor = Color.FromArgb(26, 32, 40);
+            //statusStrip1.BackColor = Color.FromArgb(26, 32, 40);
             // button1.BackColor = Color.FromArgb(26, 32, 40);
             //User datagridviewdesign
             dataGrid_book.BorderStyle = BorderStyle.None;

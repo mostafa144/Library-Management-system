@@ -681,7 +681,7 @@ namespace Library_Management_System
                     Cmd.CommandType = CommandType.StoredProcedure;
                     Cmd.CommandText = "update_author";
                     Cmd.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(author_id.Text);
-                    Cmd.Parameters.Add("@authorname", SqlDbType.VarChar).Value = author_name.Text.ToString();
+                    Cmd.Parameters.Add("@authorname", SqlDbType.VarChar).Value = author_name.Text;
                     try
                     {
                         Int32 rowsAffected = Cmd.ExecuteNonQuery();
@@ -900,9 +900,9 @@ namespace Library_Management_System
 
         private void button30_Click(object sender, EventArgs e)
         {
-            Employee_Search f3 = new Employee_Search();
-            f3.Show();
-            this.Hide();
+            //Employee_Search f3 = new Employee_Search();
+            //f3.Show();
+            //this.Hide();
         }
 
         private void button31_Click(object sender, EventArgs e)
@@ -1744,12 +1744,12 @@ namespace Library_Management_System
 
         private void button30_MouseHover(object sender, EventArgs e)
         {
-            button30.BackColor = Color.FromArgb(20, 25, 72);
+            //button30.BackColor = Color.FromArgb(20, 25, 72);
         }
 
         private void button30_MouseLeave(object sender, EventArgs e)
         {
-            button30.BackColor = Color.FromArgb(26, 32, 40);
+            //button30.BackColor = Color.FromArgb(26, 32, 40);
         }
 
         private void button29_MouseHover(object sender, EventArgs e)

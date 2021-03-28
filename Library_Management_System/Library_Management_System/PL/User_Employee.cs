@@ -91,7 +91,7 @@ namespace Library_Management_System
             button1.BackColor = Color.FromArgb(26, 32, 40);
             button2.BackColor = Color.FromArgb(26, 32, 40);
             button3.BackColor = Color.FromArgb(26, 32, 40);
-            button5.BackColor = Color.FromArgb(26, 32, 40);
+           // button5.BackColor = Color.FromArgb(26, 32, 40);
             statusStrip1.BackColor = Color.FromArgb(26, 32, 40);
         }
 
@@ -113,8 +113,8 @@ namespace Library_Management_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            frm.Show();
+            //OverallReport frm = new OverallReport();
+            //frm.Show();
         }
 
         private void button5_MouseHover(object sender, EventArgs e)

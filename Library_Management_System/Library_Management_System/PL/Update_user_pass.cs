@@ -40,6 +40,8 @@ namespace Library_Management_System
                 {
                     BL.User.user.sf_pass = user_new_pass.Text;
                     BL.table_opration.staff.update(BL.User.user);
+                    MessageBox.Show("password changed successfully");
+
                 }
                 else
                 {

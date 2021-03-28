@@ -32,7 +32,11 @@ namespace Library_Management_System
             if (pass.Text == re_pass.Text && pass.Text!="")
             {
                 if (adress.Text != "" && phone.Text != "" && ssn.Text != "" && name.Text != "")
-                BL.table_opration.staff.add_staff(adress.Text, pass.Text, phone.Text, ssn.Text, name.Text, "user");
+                {
+                    BL.table_opration.staff.add_staff(adress.Text, pass.Text, phone.Text, ssn.Text, name.Text, "user");
+                    MessageBox.Show("New employee has been added successfully");
+                }
+
                 else
                     MessageBox.Show("make sure u fill all infos boxs");
             }

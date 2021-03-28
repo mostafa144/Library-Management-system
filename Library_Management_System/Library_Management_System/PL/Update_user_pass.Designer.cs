@@ -44,7 +44,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(626, 439);
+            this.button1.Location = new System.Drawing.Point(415, 368);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 41);
             this.button1.TabIndex = 0;
@@ -58,7 +58,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(341, 242);
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(130, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 25);
             this.label1.TabIndex = 1;
@@ -68,7 +69,7 @@
             // user_old_pass
             // 
             this.user_old_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_old_pass.Location = new System.Drawing.Point(566, 242);
+            this.user_old_pass.Location = new System.Drawing.Point(355, 171);
             this.user_old_pass.Name = "user_old_pass";
             this.user_old_pass.Size = new System.Drawing.Size(253, 24);
             this.user_old_pass.TabIndex = 2;
@@ -76,7 +77,7 @@
             // user_new_pass
             // 
             this.user_new_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_new_pass.Location = new System.Drawing.Point(566, 300);
+            this.user_new_pass.Location = new System.Drawing.Point(355, 229);
             this.user_new_pass.Name = "user_new_pass";
             this.user_new_pass.Size = new System.Drawing.Size(253, 24);
             this.user_new_pass.TabIndex = 4;
@@ -86,7 +87,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(341, 300);
+            this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label2.Location = new System.Drawing.Point(130, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 25);
             this.label2.TabIndex = 3;
@@ -95,7 +97,7 @@
             // user_new_pass_re
             // 
             this.user_new_pass_re.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_new_pass_re.Location = new System.Drawing.Point(566, 362);
+            this.user_new_pass_re.Location = new System.Drawing.Point(355, 291);
             this.user_new_pass_re.Name = "user_new_pass_re";
             this.user_new_pass_re.Size = new System.Drawing.Size(253, 24);
             this.user_new_pass_re.TabIndex = 6;
@@ -105,7 +107,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(341, 361);
+            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.Location = new System.Drawing.Point(130, 290);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(205, 25);
             this.label3.TabIndex = 5;
@@ -117,7 +120,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Freestyle Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(242, 76);
+            this.label7.Location = new System.Drawing.Point(28, 43);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(790, 76);
@@ -130,9 +133,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(1133, 544);
+            this.button3.Location = new System.Drawing.Point(643, 450);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 40);
+            this.button3.Size = new System.Drawing.Size(175, 54);
             this.button3.TabIndex = 24;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
@@ -142,8 +145,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1303, 596);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(46)))), ((int)(((byte)(59)))));
+            this.ClientSize = new System.Drawing.Size(834, 526);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.user_new_pass_re);
@@ -156,7 +159,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Update_user_pass";
             this.Text = "Update_user_pass";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

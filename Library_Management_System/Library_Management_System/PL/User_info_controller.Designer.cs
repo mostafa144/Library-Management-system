@@ -179,7 +179,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Modern No. 20", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(1161, 688);
+            this.button4.Location = new System.Drawing.Point(1142, 669);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(151, 52);
             this.button4.TabIndex = 16;
